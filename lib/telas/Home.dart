@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobilerisen/constants.dart';
 import 'package:mobilerisen/telas/Detalhes1.dart';
+import 'package:mobilerisen/telas/Detalhes2.dart';
 import 'package:mobilerisen/telas/Inicio.dart';
 import 'package:mobilerisen/telas/Login.dart';
 import 'package:mobilerisen/telas/MinhasInspecoes.dart';
@@ -18,8 +19,8 @@ class _HomeState extends State<Home> {
 
   List<Widget> telas = [
     Inicio(),
+    Detalhes2(),
     MinhasInspecoes(),
-    Center(),
   ];
 
   @override
@@ -78,13 +79,14 @@ class _HomeState extends State<Home> {
               icon: Icon(Icons.home)
           ),
           BottomNavigationBarItem(
-              title: Text("Minhas inspeções"),
+              title: Text("Minha Inspeção"),
               icon: Icon(Icons.local_gas_station)
           ),
           BottomNavigationBarItem(
-              title: Text("Ajuda"),
-              icon: Icon(Icons.help)
+              title: Text("Realizadas"),
+              icon: Icon(Icons.history)
           ),
+
 
         ],
       ),

@@ -86,7 +86,7 @@ class _MinhasInspecoesState extends State<MinhasInspecoes> {
 
               onTap: () {
                 setState(() {
-                  Navigator.pushNamed(context, "/detalhes2");
+                  Navigator.pushNamed(context, "/formularioResumido");
                   print("Clicado em ${indice}");
                 });
               },

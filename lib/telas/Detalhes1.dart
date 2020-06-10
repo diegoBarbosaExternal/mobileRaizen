@@ -30,7 +30,7 @@ class _Detalhes1State extends State<Detalhes1> {
 
           children: <Widget>[
             Container(
-              height: 350,
+              height: 300,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.cover,

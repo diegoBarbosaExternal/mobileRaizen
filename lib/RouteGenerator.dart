@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobilerisen/telas/Detalhes1.dart';
 import 'package:mobilerisen/telas/Detalhes2.dart';
+import 'package:mobilerisen/telas/FormularioResumido.dart';
 import 'package:mobilerisen/telas/Home.dart';
 import 'package:mobilerisen/telas/Login.dart';
 import 'package:mobilerisen/telas/MinhasInspecoes.dart';
@@ -34,6 +35,10 @@ class RouteGenerator {
       case "/perfil":
         return MaterialPageRoute(
             builder: (_) => Perfil()
+        );
+      case "/formularioResumido":
+        return MaterialPageRoute(
+            builder: (_) => FormularioResumido()
         );
       default:
         _erroRota();

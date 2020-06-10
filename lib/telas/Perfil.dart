@@ -55,7 +55,7 @@ class _PerfilState extends State<Perfil> {
                             child: Text("À serviço da: ", style: TextStyle(fontSize: 30),),
                           ),
                           SizedBox(
-                            height: 155.0,
+                            height: 140.0,
                             child: Image.asset(
                               "imagens/sgsLogo.png",
                               fit: BoxFit.contain,
