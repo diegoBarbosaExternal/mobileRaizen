@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:mobilerisen/constants.dart';
 import 'package:mobilerisen/telas/Detalhes1.dart';
 import 'package:mobilerisen/telas/Home.dart';
 
@@ -57,6 +58,7 @@ class _InicioState extends State<Inicio> {
                 child: ListView.builder(
                   shrinkWrap: true,
                   itemCount: 3,
+
                   itemBuilder: (context, index) => GestureDetector(
                     onTap: (){
                       print("INICIO: Clicando em ${index}");
@@ -68,30 +70,50 @@ class _InicioState extends State<Inicio> {
                     child: ListTile(
                       title: Card(
                         elevation: 5,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        child: Row(
                           children: <Widget>[
-                            Container(
-                              height: 100,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: ExactAssetImage("imagens/mapa/Mapa_001.PNG"),
+
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: SizedBox(
+                                height: 50.0,
+                                child: Image.asset(
+                                  "imagens/fuel.png",
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+
+                                Padding(
+
+                                  padding: const EdgeInsets.only(top: 2),
+                                  child: Text("Posto Ipiranga #${index}", style: TextStyle(fontSize: 30),),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 2),
+                                  child: Text("Al Rio Negro, 00${index}", style: TextStyle(fontSize: 20),),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 2),
+                                  child: Text("Última inspeção: 01/01/2020", style: TextStyle(fontSize: 20),),
                                 ),
 
-                              ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  mainAxisSize: MainAxisSize.max,
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: <Widget>[
+                                    Text('Status', style: TextStyle(fontSize: 20),),
+                                    Icon(Icons.brightness_1, color: Colors.orange,)
+                                  ],
+                                ),
 
+                              ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: Text("Posto Ipiranga #${index}"),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: Text("Al Rio Negro, 00${index}"),
-                            ),
-
                           ],
                         ),
                       ),

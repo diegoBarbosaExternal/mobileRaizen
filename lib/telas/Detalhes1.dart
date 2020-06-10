@@ -78,23 +78,32 @@ class _Detalhes1State extends State<Detalhes1> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.only(left: 10, top: 10),
+                    padding: const EdgeInsets.only(left: 10, top: 0, bottom: 5),
                     child: Text("Razão Social: Auto Posto 123ABC Ltda.", style: TextStyle(fontSize: 20),),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 10, top: 10),
+                    padding: const EdgeInsets.only(left: 10, top: 0, bottom: 5),
                     child: Text("CNPJ: 01.123.456/0001-28", style: TextStyle(fontSize: 20),),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 10, top: 10),
-                    child: Text("Última inspeção realizada em: 28/02/2020", style: TextStyle(fontSize: 20),),
+                    padding: const EdgeInsets.only(left: 10, top: 0, bottom: 5),
+                    child: Text("Gerente: Pedro A.", style: TextStyle(fontSize: 20),),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 10, top: 10),
+                    padding: const EdgeInsets.only(left: 10, top: 0, bottom: 5),
+                    child: Text("Tel Contato: 11 98765-4321", style: TextStyle(fontSize: 20),),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10, top: 0, bottom: 5),
+                    child: Text("Última inspeção: 28/02/2020", style: TextStyle(fontSize: 20),),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10, top: 0, bottom: 5),
                     child: Text("Tipo de Combustível: Gasolina", style: TextStyle(fontSize: 20),),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 10, top: 10),
+                    padding: const EdgeInsets.only(left: 10, top: 0, bottom: 18),
                     child: Text("Bandeira: Petrobrás", style: TextStyle(fontSize: 20),),
                   ),
 
@@ -113,7 +122,7 @@ class _Detalhes1State extends State<Detalhes1> {
           Navigator.pushReplacementNamed(context, "/home");
           Navigator.pushNamed(context, "/detalhes2");
           },
-          label: Text("Aceitar Inspeção", style: TextStyle(fontSize: 20),)),
+          label: Text("Aceitar Inspeção", style: TextStyle(fontSize: 15),)),
       bottomNavigationBar: BottomAppBar(child: Row(children: <Widget>[
         SizedBox(
           height: 55,

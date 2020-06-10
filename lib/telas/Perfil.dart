@@ -19,6 +19,7 @@ class _PerfilState extends State<Perfil> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start ,
             children: <Widget>[
+
               Align(alignment: Alignment.center,
                 child: Icon(Icons.supervised_user_circle, size: MediaQuery.of(context).size.width/2
                 ),
@@ -26,51 +27,47 @@ class _PerfilState extends State<Perfil> {
               SizedBox(
                 height: 40,
               ),
-              Padding( padding: EdgeInsets.only(left: 16, bottom: 10),child: Text( 'Nome: Jão Pedro Alvres Cabral', style: TextStyle(fontSize: 18 ),), ),
-              Padding( padding: EdgeInsets.only(left: 16, bottom: 10),child: Text( 'E-mail: jaozin.vidaloka2002@gmail.com', style: TextStyle(fontSize: 18 ),), ),
-              Padding( padding: EdgeInsets.only(left: 16, bottom: 10),child: Text( 'Telefone: 11 91234-5678', style: TextStyle(fontSize: 18 ),), ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            fit: BoxFit.scaleDown,
-                            image: ExactAssetImage("imagens/bolinha.png"),
-                          ),
+                      Text('João da Silva', style: TextStyle(fontSize: 40)
                         ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(50.0),
-                          child: Text( '2', style: TextStyle(fontSize: 100),),
-                        ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, top: 10),
+                        child: Text('joao.silva@gmail.com', style: TextStyle(fontSize: 30),),
                       ),
-                      Text( 'Atribuídas', style: TextStyle(fontSize: 20 ),),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            fit: BoxFit.scaleDown,
-                            image: ExactAssetImage("imagens/bolinha.png"),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(50.0),
-                          child: Text( '1', style: TextStyle(fontSize: 100),),
-                        ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5, top: 5),
+                        child: Text('11 91234-5678', style: TextStyle(fontSize: 30),),
                       ),
-                      Text( 'Realizadas', style: TextStyle(fontSize: 20 ),),
-                    ],
-                  ),
 
+
+                  Column(
+
+                        children: <Widget>[
+
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10, top: 100),
+                            child: Text("À serviço da: ", style: TextStyle(fontSize: 30),),
+                          ),
+                          SizedBox(
+                            height: 155.0,
+                            child: Image.asset(
+                              "imagens/sgsLogo.png",
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+
+
+                        ],
+                      ),
+                    ],
+                  ),
                 ],
-              ),
-              SizedBox (
-                height: 100,
               ),
             ],
           ),

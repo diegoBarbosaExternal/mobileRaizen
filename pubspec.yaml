@@ -58,6 +58,9 @@ flutter:
     - imagens/g914.png
     - imagens/PontosPosto.png
     - imagens/bolinha.png
+    - imagens/sgsLogo.png
+    - imagens/fuel.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
