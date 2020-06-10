@@ -5,7 +5,7 @@ import 'package:mobilerisen/telas/Detalhes1.dart';
 import 'package:mobilerisen/telas/Home.dart';
 import 'package:mobilerisen/telas/Login.dart';
 import 'package:mobilerisen/telas/MinhasInspecoes.dart';
-
+//primeiro comentario pra teste
 void main() {
   runApp(MaterialApp(
     theme: ThemeData(
