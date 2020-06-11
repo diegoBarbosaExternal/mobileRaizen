@@ -145,15 +145,14 @@ class _Detalhes1State extends State<Detalhes1> {
                   ),
 
                   Row(
-
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
-                      SizedBox(
-                        width: 45,
-                      ),
+
                       Padding(
 
                         padding: const EdgeInsets.all(30),
                         child: new FloatingActionButton.extended(
+                        icon: Icon(Icons.thumb_up),
                           heroTag: "btn1",
                           elevation: 5,
                           label: Text('ACEITAR', style: TextStyle(fontSize: 16),),
@@ -163,8 +162,7 @@ class _Detalhes1State extends State<Detalhes1> {
                           setState(() {
                           globals.telaSelecionada = 1;
                           });
-                            Navigator.pushReplacementNamed(context, "/home");
-
+                            Navigator.pushNamedAndRemoveUntil(context, "/home", (_) => false);
                           },
                         ),
                       ),
@@ -172,6 +170,7 @@ class _Detalhes1State extends State<Detalhes1> {
                       Padding(
                         padding: const EdgeInsets.all(20),
                         child: new FloatingActionButton.extended(
+                          icon: Icon(Icons.access_alarms),
                           heroTag: "btn2",
                           elevation: 5,
                           label: Text('AGENDAR', style: TextStyle(fontSize: 16),),

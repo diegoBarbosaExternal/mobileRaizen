@@ -12,7 +12,7 @@ class _MinhasInspecoesState extends State<MinhasInspecoes> {
 
   void _carregarItens() {
     _itens = [];
-    for (int i = 0; i < 15; i++) {
+    for (int i = 0; i < 8; i++) {
       Map<String, dynamic> item = Map();
       item["titulo"] = "Posto Ipiranga #${i}";
       item["endereco"] = "Al Rio Negro, 00${i}";
@@ -46,9 +46,7 @@ class _MinhasInspecoesState extends State<MinhasInspecoes> {
                           fit: BoxFit.cover,
                           image: ExactAssetImage("imagens/mapa/Mapa_001.PNG"),
                         ),
-
                       ),
-
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 10),
@@ -78,8 +76,6 @@ class _MinhasInspecoesState extends State<MinhasInspecoes> {
                         ],
                       ),
                     ),
-
-
                   ],
                 ),
               ),

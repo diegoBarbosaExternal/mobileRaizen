@@ -16,6 +16,9 @@ class _FormularioResumidoState extends State<FormularioResumido> {
 
       },
       child: Scaffold(
+        appBar: AppBar(
+          title: Text("Inspeção realizada"),
+        ),
 
         body: SafeArea(
           child: SingleChildScrollView(
@@ -102,12 +105,21 @@ class _FormularioResumidoState extends State<FormularioResumido> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    SizedBox(
-                      height: 140.0,
-                      child: Image.asset(
-                        "imagens/sgsLogo.png",
-                        fit: BoxFit.contain,
-                      ),
+                    Column(
+
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 100),
+                          child: Text("À serviço da: ", style: TextStyle(fontSize: 30),),
+                        ),
+                        SizedBox(
+                          height: 140.0,
+                          child: Image.asset(
+                            "imagens/sgsLogo.png",
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -117,18 +129,6 @@ class _FormularioResumidoState extends State<FormularioResumido> {
             ),
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButton.extended(
-            elevation: 5,
-            onPressed: (){
-              Navigator.pop(context);
-            },
-            label: Text("Voltar", style: TextStyle(fontSize: 20),)),
-        bottomNavigationBar: BottomAppBar(child: Row(children: <Widget>[
-          SizedBox(
-            height: 55,
-          )
-        ],),),
       ),
     );
   }

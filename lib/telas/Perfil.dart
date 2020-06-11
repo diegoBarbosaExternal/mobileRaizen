@@ -45,8 +45,7 @@ class _PerfilState extends State<Perfil> {
                         child: Text('11 91234-5678', style: TextStyle(fontSize: 30),),
                       ),
 
-
-                  Column(
+                      Column(
 
                         children: <Widget>[
                           Padding(
@@ -62,6 +61,9 @@ class _PerfilState extends State<Perfil> {
                           ),
                         ],
                       ),
+
+
+
                     ],
                   ),
                 ],
@@ -77,7 +79,7 @@ class _PerfilState extends State<Perfil> {
           onPressed: (){
             Navigator.pushReplacementNamed(context, "/login");
           },
-          label: Text("Sair", style: TextStyle(fontSize: 30),)),
+          label: Text("Desconectar", style: TextStyle(fontSize: 30),)),
       bottomNavigationBar: BottomAppBar(child: Row(children: <Widget>[
         SizedBox(
           height: 55,

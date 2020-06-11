@@ -16,9 +16,9 @@ class _LoginState extends State<Login> {
   void _validarLogin(){
 
     if (
-    true
-  //  _controllerUsuario.text == "queijin" &&
-  //  _controllerSenha.text == "sgs"
+//    true
+    _controllerUsuario.text == "sgs" &&
+    _controllerSenha.text == "sgs"
     ){
 //      _controllerUsuario.text = "";
 //      _controllerSenha.text = "";

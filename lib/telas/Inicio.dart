@@ -71,6 +71,7 @@ class _InicioState extends State<Inicio> {
                       title: Card(
                         elevation: 5,
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
 
                             Padding(
@@ -121,7 +122,10 @@ class _InicioState extends State<Inicio> {
                                   height: 50.0,
                                   child: Icon(Icons.access_time, color: Colors.black, size: 45,
                                   )
-                              ): SizedBox(),
+                              ): SizedBox(
+                                height: 50,
+                                width: 50,
+                              ),
                             ),
 
                           ],
