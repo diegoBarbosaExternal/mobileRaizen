@@ -1,13 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mobilerisen/constants.dart';
+import 'package:mobilerisen/globals.dart' as globals;
 
-class Detalhes2 extends StatefulWidget {
+
+class InspecaoAceita extends StatefulWidget {
   @override
-  _Detalhes2State createState() => _Detalhes2State();
+  _InspecaoAceitaState createState() => _InspecaoAceitaState();
 }
 
-class _Detalhes2State extends State<Detalhes2> {
+class _InspecaoAceitaState extends State<InspecaoAceita> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -295,9 +297,16 @@ class _Detalhes2State extends State<Detalhes2> {
           floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
           floatingActionButton: FloatingActionButton.extended(
               elevation: 5,
-              onPressed: (){
-                Navigator.pop(context);
-              },
+
+                onPressed: (){
+
+                  setState(() {
+                    globals.telaSelecionada = 0;
+                  });
+                  Navigator.pushReplacementNamed(context, "/home");
+
+                },
+
               label: Text("Finalizar e Enviar", style: TextStyle(fontSize: 20),)),
           bottomNavigationBar: BottomAppBar(child: Row(children: <Widget>[
             SizedBox(

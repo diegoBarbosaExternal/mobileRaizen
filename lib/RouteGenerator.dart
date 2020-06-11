@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobilerisen/telas/Detalhes1.dart';
-import 'package:mobilerisen/telas/Detalhes2.dart';
+import 'package:mobilerisen/telas/InspecaoAceita.dart';
 import 'package:mobilerisen/telas/FormularioResumido.dart';
 import 'package:mobilerisen/telas/Home.dart';
 import 'package:mobilerisen/telas/Login.dart';
@@ -28,9 +28,9 @@ class RouteGenerator {
         return MaterialPageRoute(
             builder: (_) => Detalhes1()
         );
-        case "/detalhes2":
+        case "/inspecaoAceita":
         return MaterialPageRoute(
-            builder: (_) => Detalhes2()
+            builder: (_) => InspecaoAceita()
         );
       case "/perfil":
         return MaterialPageRoute(

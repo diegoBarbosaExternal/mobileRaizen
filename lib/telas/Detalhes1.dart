@@ -1,7 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mobilerisen/constants.dart';
 import 'package:mobilerisen/telas/Home.dart';
 import 'package:mobilerisen/telas/Login.dart';
+import 'package:some_calendar/some_calendar.dart';
+import 'package:intl/intl.dart';
+import 'package:jiffy/jiffy.dart';
+import 'package:mobilerisen/globals.dart' as globals;
+
 
 class Detalhes1 extends StatefulWidget {
   @override
@@ -13,6 +19,7 @@ class _Detalhes1State extends State<Detalhes1> {
   @override
   void initState() {
     // TODO: implement initState
+    Intl.systemLocale = 'en_US';
     super.initState();
   }
 
@@ -20,6 +27,9 @@ class _Detalhes1State extends State<Detalhes1> {
   Widget build(BuildContext context) {
 
 //    Navigator.pushReplacementNamed(context, "/");
+    DateTime selectedDate = DateTime.now();
+    List<DateTime> selectedDates = List();
+    final _scaffoldKey = GlobalKey<ScaffoldState>();
 
     return Scaffold(
       appBar: AppBar(
@@ -47,23 +57,50 @@ class _Detalhes1State extends State<Detalhes1> {
               color: Colors.black,
               child: Padding(
                 padding: EdgeInsets.all(16),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text(
-                      "Posto Ipiranga",
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: Colors.white,
-                      ),
+
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          "Posto Ipiranga",
+                          style: TextStyle(
+                            fontSize: 22,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          "Al. Rio Negro, 1139 - Alphaville",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
-                    Text(
-                      "Al. Rio Negro, 1139 - Alphaville",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
+                    Column(
+
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          "Agendado para:",
+                          style: TextStyle(
+                            fontSize: 22,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          "27/01/2020 às 19h50",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -104,8 +141,66 @@ class _Detalhes1State extends State<Detalhes1> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 10, top: 0, bottom: 18),
-                    child: Text("Bandeira: Petrobrás", style: TextStyle(fontSize: 20),),
+                    child: Text("Bandeira: Branca", style: TextStyle(fontSize: 20),),
                   ),
+
+                  Row(
+
+                    children: <Widget>[
+                      SizedBox(
+                        width: 45,
+                      ),
+                      Padding(
+
+                        padding: const EdgeInsets.all(30),
+                        child: new FloatingActionButton.extended(
+                          heroTag: "btn1",
+                          elevation: 5,
+                          label: Text('ACEITAR', style: TextStyle(fontSize: 16),),
+                          backgroundColor: COR_RAIZEN_ROXO,
+                          onPressed: (){
+
+                          setState(() {
+                          globals.telaSelecionada = 1;
+                          });
+                            Navigator.pushReplacementNamed(context, "/home");
+
+                          },
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: new FloatingActionButton.extended(
+                          heroTag: "btn2",
+                          elevation: 5,
+                          label: Text('AGENDAR', style: TextStyle(fontSize: 16),),
+                          backgroundColor: COR_RAIZEN_ROXO,
+                          onPressed: (){
+
+                            showDialog(
+                                context: context,
+                                builder: (_) => SomeCalendar(
+                                  primaryColor: (COR_RAIZEN_ROXO),
+                                  mode: SomeMode.Single,
+                                  isWithoutDialog: false,
+                                  selectedDate: selectedDate,
+                                  startDate: Jiffy().subtract(years: 3),
+                                  lastDate: Jiffy().add(months: 12),
+                                  done: (date) {
+                                    setState(() {
+
+                                    });
+                                  },
+                                ));
+                          },
+                        ),
+                      ),
+
+                    ],
+                  ),
+
+
 
                 ],
               ),
@@ -114,20 +209,7 @@ class _Detalhes1State extends State<Detalhes1> {
           ],
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton.extended(
-        elevation: 5,
-          onPressed: (){
-//          Navigator.pop(context);
-          Navigator.pushReplacementNamed(context, "/home");
-          Navigator.pushNamed(context, "/detalhes2");
-          },
-          label: Text("Aceitar Inspeção", style: TextStyle(fontSize: 15),)),
-      bottomNavigationBar: BottomAppBar(child: Row(children: <Widget>[
-        SizedBox(
-          height: 55,
-        )
-      ],),),
+
     );
   }
 }

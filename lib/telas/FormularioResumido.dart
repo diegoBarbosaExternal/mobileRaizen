@@ -96,6 +96,23 @@ class _FormularioResumidoState extends State<FormularioResumido> {
                   padding: EdgeInsets.all(15),
                   child: Text('Tipo de Inspeção: Etanol', style: TextStyle(fontSize: 20),),
                 ),
+
+                /// INSIRA SEU LOGO AQUI
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    SizedBox(
+                      height: 140.0,
+                      child: Image.asset(
+                        "imagens/sgsLogo.png",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ],
+                ),
+
+
               ],
             ),
           ),

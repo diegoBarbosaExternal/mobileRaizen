@@ -114,8 +114,19 @@ class _InicioState extends State<Inicio> {
 
                               ],
                             ),
+
+                            Padding(
+                              padding: const EdgeInsets.all(22.0),
+                              child: index == 1 ? SizedBox(
+                                  height: 50.0,
+                                  child: Icon(Icons.access_time, color: Colors.black, size: 45,
+                                  )
+                              ): SizedBox(),
+                            ),
+
                           ],
                         ),
+
                       ),
                     ),
 

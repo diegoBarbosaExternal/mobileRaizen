@@ -49,7 +49,6 @@ class _PerfilState extends State<Perfil> {
                   Column(
 
                         children: <Widget>[
-
                           Padding(
                             padding: const EdgeInsets.only(left: 10, top: 100),
                             child: Text("À serviço da: ", style: TextStyle(fontSize: 30),),
@@ -61,8 +60,6 @@ class _PerfilState extends State<Perfil> {
                               fit: BoxFit.contain,
                             ),
                           ),
-
-
                         ],
                       ),
                     ],

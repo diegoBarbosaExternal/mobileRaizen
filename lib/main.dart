@@ -5,8 +5,11 @@ import 'package:mobilerisen/telas/Detalhes1.dart';
 import 'package:mobilerisen/telas/Home.dart';
 import 'package:mobilerisen/telas/Login.dart';
 import 'package:mobilerisen/telas/MinhasInspecoes.dart';
-//primeiro comentario pra teste
+import 'globals.dart' as globals;
+
 void main() {
+  globals.telaSelecionada = 0;
+
   runApp(MaterialApp(
     theme: ThemeData(
       primaryColor: Colors.white,

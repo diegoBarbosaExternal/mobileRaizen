@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mobilerisen/constants.dart';
 import 'package:mobilerisen/telas/Detalhes1.dart';
-import 'package:mobilerisen/telas/Detalhes2.dart';
+import 'package:mobilerisen/telas/InspecaoAceita.dart';
 import 'package:mobilerisen/telas/Inicio.dart';
 import 'package:mobilerisen/telas/Login.dart';
 import 'package:mobilerisen/telas/MinhasInspecoes.dart';
 import 'package:mobilerisen/telas/Perfil.dart';
+import 'package:mobilerisen/constants.dart';
+import 'package:mobilerisen/globals.dart' as globals;
 
 class Home extends StatefulWidget {
   @override
@@ -14,12 +16,12 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  int telaIndex = 0;
+
   String tituloTela = "";
 
   List<Widget> telas = [
     Inicio(),
-    Detalhes2(),
+    InspecaoAceita(),
     MinhasInspecoes(),
   ];
 
@@ -63,14 +65,14 @@ class _HomeState extends State<Home> {
           ),
         ],
       ),
-      body: telas[telaIndex],
+      body: telas[globals.telaSelecionada],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         fixedColor: COR_RAIZEN_ROXO,
-        currentIndex: telaIndex,
+        currentIndex: globals.telaSelecionada,
         onTap: (indice){
           setState(() {
-            telaIndex = indice;
+            globals.telaSelecionada = indice;
           });
         },
         items: [
