@@ -44,13 +44,12 @@ class _PerfilState extends State<Perfil> {
                         padding: const EdgeInsets.only(left: 5, top: 5),
                         child: Text('11 91234-5678', style: TextStyle(fontSize: 30),),
                       ),
-
                       Column(
 
                         children: <Widget>[
                           Padding(
                             padding: const EdgeInsets.only(left: 10, top: 100),
-                            child: Text("À serviço da: ", style: TextStyle(fontSize: 30),),
+                            child: Text("A serviço da: ", style: TextStyle(fontSize: 30),),
                           ),
                           SizedBox(
                             height: 140.0,
@@ -71,7 +70,6 @@ class _PerfilState extends State<Perfil> {
             ],
           ),
         ),
-
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton.extended(

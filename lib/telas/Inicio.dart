@@ -12,11 +12,23 @@ class Inicio extends StatefulWidget {
 
 class _InicioState extends State<Inicio> {
 
+  Color corTempo(int index){
+    switch(index){
+      case 0:
+        return Colors.green;
+      case 1:
+        return Colors.amber;
+      case 2:
+        return Colors.red;
+      default:
+        return Colors.blue;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
 
     print ("INICIO");
-
     return Container(
       child: SingleChildScrollView(
         child: Column(
@@ -109,9 +121,13 @@ class _InicioState extends State<Inicio> {
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: <Widget>[
                                     Text('Status', style: TextStyle(fontSize: 20),),
-                                    Icon(Icons.brightness_1, color: Colors.orange,)
+                                    Icon(Icons.brightness_1, color: corTempo(index)),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
                                   ],
                                 ),
+
 
                               ],
                             ),
