@@ -10,8 +10,12 @@ class InspecaoAceita extends StatefulWidget {
 }
 
 class _InspecaoAceitaState extends State<InspecaoAceita> {
+
+  String _escolhaUsuario;
+
   @override
   Widget build(BuildContext context) {
+
     return GestureDetector(
       onTap: (){
 
@@ -106,23 +110,38 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
 
               Padding(
                 padding: EdgeInsets.all(15),
-                child: TextField(
-                  cursorColor: Colors.black54,
-                  keyboardType: TextInputType.text,
-                  decoration: InputDecoration(
-                    labelText: "Atendente",
-                    labelStyle: TextStyle(
-                        color: Colors.black54
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: COR_RAIZEN_ROXO),
-                    ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text("1. O posto é isento de fontes..."),
+                    Row(
+                      children: <Widget>[
+                        Text("Masculino"),
+                        Radio(
+                            value: "m",
+                            groupValue: _escolhaUsuario,
+                            onChanged: (String escolha){
+                              setState(() {
+                                _escolhaUsuario = escolha;
+                              });
+                              print("resultado: " + escolha);
+                            }
+                        ),
+                        Text("Feminino"),
+                        Radio(
+                            value: "f",
+                            groupValue: _escolhaUsuario,
+                            onChanged: (String escolha){
+                              setState(() {
+                                _escolhaUsuario = escolha;
+                              });
+                              print("resultado: " + escolha);
+                            }
+                        ),
 
-                  ),
-                  style: TextStyle(
-                      fontSize: 22
-                  ),
-
+                      ],
+                    ),
+                  ],
                 ),
               ),
               Padding(

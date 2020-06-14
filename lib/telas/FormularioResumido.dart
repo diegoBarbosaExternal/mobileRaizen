@@ -20,114 +20,133 @@ class _FormularioResumidoState extends State<FormularioResumido> {
           title: Text("Inspeção realizada"),
         ),
 
-        body: SafeArea(
-          child: SingleChildScrollView(
-            padding: EdgeInsets.all(3),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text("Inspeção #1234", style: TextStyle(fontSize: 32),),
-                    ],
-                  ),
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+        body: Column(
+          children: <Widget>[
+            Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
-                    Container(
-                      height: 250,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: ExactAssetImage("imagens/mapa/Mapa_001.PNG"),
-                        ),
 
-                      ),
-
-                    ),
+                    /// TITULO
                     Padding(
-                      padding: const EdgeInsets.only(right: 10),
+                      padding: const EdgeInsets.all(8.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Column(
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(5.0),
-                                child: Text("Posto Ipiranga #1"),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(5.0),
-                                child: Text("Al Rio Negro, 001"),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: <Widget>[
-                              Text("STATUS: "),
-                              Icon(Icons.brightness_1,
-                                color: (Colors.orange),
-                              ),
-                            ],
-                          ),
+                          Text("Inspeção #1234", style: TextStyle(fontSize: 32),),
                         ],
                       ),
                     ),
 
+                    /// MAPA COM BARRA DE STATUS E ENDEREÇO
+                    Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Card(
+                        elevation: 5,
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
 
-                  ],
-                ),
-                Padding(
-                  padding: EdgeInsets.all(15),
-                  child: Text('Data/Hora da Inspeção: 27/01/2020 22h30', style: TextStyle(fontSize: 20),),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(15),
-                  child: Text('Endereço: Rua Jovinal, 344 - São Paulo', style: TextStyle(fontSize: 20),),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(15),
-                  child: Text('Razão Social: Auto Posto 123ABC Ltda. ', style: TextStyle(fontSize: 20),),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(15),
-                  child: Text('Tipo de Inspeção: Etanol', style: TextStyle(fontSize: 20),),
-                ),
+                            /// MAPA
+                            Container(
+                              height: 200,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: ExactAssetImage("imagens/mapa/Mapa_001.PNG"),
+                                ),
+                              ),
+                            ),
 
-                /// INSIRA SEU LOGO AQUI
+                            /// BARRA BRANCA ABAIXO DO MAPA
+                            Padding(
+                              padding: const EdgeInsets.only(left: 5, right: 5),
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
+                              /// LINHA DA BARRA
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisSize: MainAxisSize.max,
+                                children: <Widget>[
+                                  /// NOME DO POSTO E ENDEREÇO
+                                  Column(
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Text("Posto Ipiranga 001"),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Text("Al Rio Negro, 001"),
+                                      ),
+                                    ],
+                                  ),
+
+                                  /// STATUS E BOLINHA LARANJA
+                                  Row(
+                                    children: <Widget>[
+                                      Text("STATUS: "),
+                                      Icon(Icons.brightness_1,
+                                        color: (Colors.orange),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    /// DETALHES DA INSPEÇÃO
                     Column(
-
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 100),
-                          child: Text("À serviço da: ", style: TextStyle(fontSize: 30),),
+                          padding: EdgeInsets.all(15),
+                          child: Text('Data/Hora da Inspeção: 27/01/2020 22h30', style: TextStyle(fontSize: 20),),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(15),
+                          child: Text('Endereço: Rua Jovinal, 344 - São Paulo', style: TextStyle(fontSize: 20),),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(15),
+                          child: Text('Razão Social: Auto Posto 123ABC Ltda. ', style: TextStyle(fontSize: 20),),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(15),
+                          child: Text('Tipo de Inspeção: Etanol', style: TextStyle(fontSize: 20),),
+                        ),
+                      ],
+                    ),
+
+                    /// LOGO COM TÍTULO
+                    Column(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(left: 0, top: 0),
+                          child: Text("A serviço da: ", style: TextStyle(fontSize: 30),),
                         ),
                         SizedBox(
-                          height: 140.0,
+                          width: MediaQuery.of(context).size.width / 2,
                           child: Image.asset(
-                            "imagens/sgsLogo.png",
+                            "imagens/Raizen-logo.png",
                             fit: BoxFit.contain,
                           ),
                         ),
                       ],
                     ),
+
+
                   ],
                 ),
-
-
-              ],
             ),
-          ),
+          ],
         ),
       ),
     );

@@ -37,7 +37,6 @@ class _NovaInspecaoState extends State<NovaInspecao> {
       ),
       body: Container(
         child: Column(
-
           children: <Widget>[
             Container(
               height: 300,
