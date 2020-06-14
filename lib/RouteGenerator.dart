@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobilerisen/telas/Detalhes1.dart';
+import 'package:mobilerisen/telas/Apresentacao.dart';
+import 'package:mobilerisen/telas/NovaInspecao.dart';
 import 'package:mobilerisen/telas/InspecaoAceita.dart';
 import 'package:mobilerisen/telas/FormularioResumido.dart';
 import 'package:mobilerisen/telas/Home.dart';
@@ -24,9 +25,9 @@ class RouteGenerator {
         return MaterialPageRoute(
             builder: (_) => Home()
         );
-      case "/detalhes1":
+      case "/novaInspecao":
         return MaterialPageRoute(
-            builder: (_) => Detalhes1()
+            builder: (_) => NovaInspecao()
         );
         case "/inspecaoAceita":
         return MaterialPageRoute(
@@ -39,6 +40,10 @@ class RouteGenerator {
       case "/formularioResumido":
         return MaterialPageRoute(
             builder: (_) => FormularioResumido()
+        );
+      case "/apresentacao":
+        return MaterialPageRoute(
+            builder: (_) => Apresentacao()
         );
       default:
         _erroRota();

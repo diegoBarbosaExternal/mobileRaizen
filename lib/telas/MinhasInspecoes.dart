@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:mobilerisen/globals.dart' as globals;
 
 class MinhasInspecoes extends StatefulWidget {
   @override
@@ -82,8 +83,14 @@ class _MinhasInspecoesState extends State<MinhasInspecoes> {
 
               onTap: () {
                 setState(() {
-                  Navigator.pushNamed(context, "/formularioResumido");
-                  print("Clicado em ${indice}");
+                  switch(globals.telaSelecionada){
+                    case 1:
+                      Navigator.pushNamed(context, "/apresentacao");
+                      break;
+                    case 2:
+                      Navigator.pushNamed(context, "/formularioResumido");
+                      break;
+                  }
                 });
               },
             );

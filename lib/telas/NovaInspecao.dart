@@ -9,12 +9,12 @@ import 'package:jiffy/jiffy.dart';
 import 'package:mobilerisen/globals.dart' as globals;
 
 
-class Detalhes1 extends StatefulWidget {
+class NovaInspecao extends StatefulWidget {
   @override
-  _Detalhes1State createState() => _Detalhes1State();
+  _NovaInspecaoState createState() => _NovaInspecaoState();
 }
 
-class _Detalhes1State extends State<Detalhes1> {
+class _NovaInspecaoState extends State<NovaInspecao> {
 
   @override
   void initState() {
@@ -152,10 +152,10 @@ class _Detalhes1State extends State<Detalhes1> {
 
                         padding: const EdgeInsets.all(30),
                         child: new FloatingActionButton.extended(
-                        icon: Icon(Icons.thumb_up),
+                        icon: Icon(Icons.check),
                           heroTag: "btn1",
                           elevation: 5,
-                          label: Text('ACEITAR', style: TextStyle(fontSize: 16),),
+                          label: Text('SELECIONAR', style: TextStyle(fontSize: 16),),
                           backgroundColor: COR_RAIZEN_ROXO,
                           onPressed: (){
 
@@ -167,34 +167,7 @@ class _Detalhes1State extends State<Detalhes1> {
                         ),
                       ),
 
-                      Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: new FloatingActionButton.extended(
-                          icon: Icon(Icons.access_alarms),
-                          heroTag: "btn2",
-                          elevation: 5,
-                          label: Text('AGENDAR', style: TextStyle(fontSize: 16),),
-                          backgroundColor: COR_RAIZEN_ROXO,
-                          onPressed: (){
 
-                            showDialog(
-                                context: context,
-                                builder: (_) => SomeCalendar(
-                                  primaryColor: (COR_RAIZEN_ROXO),
-                                  mode: SomeMode.Single,
-                                  isWithoutDialog: false,
-                                  selectedDate: selectedDate,
-                                  startDate: Jiffy().subtract(years: 3),
-                                  lastDate: Jiffy().add(months: 12),
-                                  done: (date) {
-                                    setState(() {
-
-                                    });
-                                  },
-                                ));
-                          },
-                        ),
-                      ),
 
                     ],
                   ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobilerisen/RouteGenerator.dart';
 import 'package:mobilerisen/constants.dart';
-import 'package:mobilerisen/telas/Detalhes1.dart';
+import 'package:mobilerisen/telas/NovaInspecao.dart';
 import 'package:mobilerisen/telas/Home.dart';
 import 'package:mobilerisen/telas/Login.dart';
 import 'package:mobilerisen/telas/MinhasInspecoes.dart';

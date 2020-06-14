@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:mobilerisen/constants.dart';
-import 'package:mobilerisen/telas/Detalhes1.dart';
+import 'package:mobilerisen/telas/NovaInspecao.dart';
 import 'package:mobilerisen/telas/Home.dart';
 
 class Inicio extends StatefulWidget {
@@ -75,7 +75,7 @@ class _InicioState extends State<Inicio> {
                     onTap: (){
                       print("INICIO: Clicando em ${index}");
 
-                      Navigator.pushNamed(context, "/detalhes1");
+                      Navigator.pushNamed(context, "/novaInspecao");
 
                     },
 
