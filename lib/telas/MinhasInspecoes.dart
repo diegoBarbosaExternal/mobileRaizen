@@ -45,7 +45,7 @@ class _MinhasInspecoesState extends State<MinhasInspecoes> {
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
-                          image: ExactAssetImage("imagens/mapa/Mapa_001.PNG"),
+                          image: ExactAssetImage("imagens/mapa/mapaBranco.png"),
                         ),
                       ),
                     ),
@@ -55,25 +55,26 @@ class _MinhasInspecoesState extends State<MinhasInspecoes> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Padding(
                                 padding: const EdgeInsets.all(5.0),
-                                child: Text("Posto Ipiranga #${indice}"),
+                                child: Text("Posto Xxxxx"),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(5.0),
-                                child: Text("Al Rio Negro, 00${indice}"),
+                                child: Text("Rua xxx, nºyyy"),
                               ),
                             ],
                           ),
-                          Row(
-                            children: <Widget>[
-                              Text("STATUS: "),
-                              Icon(Icons.brightness_1,
-                                color: (indice % 3 == 0 ? Colors.green : Colors.orange),
-                              ),
-                            ],
-                          ),
+//                          Row(
+//                            children: <Widget>[
+//                              Text("STATUS: "),
+//                              Icon(Icons.brightness_1,
+//                                color: (indice % 3 == 0 ? Colors.green : Colors.orange),
+//                              ),
+//                            ],
+//                          ),
                         ],
                       ),
                     ),

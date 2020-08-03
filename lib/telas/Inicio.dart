@@ -39,7 +39,7 @@ class _InicioState extends State<Inicio> {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: ExactAssetImage("imagens/mapa/PontosPosto.png"),
+                  image: ExactAssetImage("imagens/mapa/mapaBranco.png"),
                 ),
 
               ),
@@ -104,29 +104,29 @@ class _InicioState extends State<Inicio> {
                                 Padding(
 
                                   padding: const EdgeInsets.only(top: 2),
-                                  child: Text("Posto Ipiranga #${index}", style: TextStyle(fontSize: 30),),
+                                  child: Text("Posto Xxxxx", style: TextStyle(fontSize: 30),),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(top: 2),
-                                  child: Text("Al Rio Negro, 00${index}", style: TextStyle(fontSize: 20),),
+                                  child: Text("Rua xxx, nºyyy", style: TextStyle(fontSize: 20),),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(top: 2),
                                   child: Text("Última inspeção: 01/01/2020", style: TextStyle(fontSize: 20),),
                                 ),
 
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  mainAxisSize: MainAxisSize.max,
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  children: <Widget>[
-                                    Text('Status', style: TextStyle(fontSize: 20),),
-                                    Icon(Icons.brightness_1, color: corTempo(index)),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                  ],
-                                ),
+//                                Row(
+////                                  mainAxisAlignment: MainAxisAlignment.end,
+////                                  mainAxisSize: MainAxisSize.max,
+////                                  crossAxisAlignment: CrossAxisAlignment.end,
+////                                  children: <Widget>[
+////                                    Text('Status', style: TextStyle(fontSize: 20),),
+////                                    Icon(Icons.brightness_1, color: corTempo(index)),
+////                                    SizedBox(
+////                                      height: 10,
+////                                    ),
+////                                  ],
+////                                ),
 
 
                               ],

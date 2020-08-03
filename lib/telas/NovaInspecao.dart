@@ -43,7 +43,7 @@ class _NovaInspecaoState extends State<NovaInspecao> {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: ExactAssetImage("imagens/mapa/Mapa_001.PNG"),
+                  image: ExactAssetImage("imagens/mapa/mapaBranco.png"),
                 ),
 
               ),
@@ -65,14 +65,14 @@ class _NovaInspecaoState extends State<NovaInspecao> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          "Posto Ipiranga",
+                          "Posto Xxxxx",
                           style: TextStyle(
                             fontSize: 22,
                             color: Colors.white,
                           ),
                         ),
                         Text(
-                          "Al. Rio Negro, 1139 - Alphaville",
+                          "Rua xxx. nºyyy",
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.white,

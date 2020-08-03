@@ -64,7 +64,7 @@ class _PerfilState extends State<Perfil> {
                     SizedBox(
                       height: 100.0,
                       child: Image.asset(
-                        "imagens/Raizen-logo.png",
+                        "imagens/sgsLogo.png",
                         fit: BoxFit.contain,
                       ),
                     ),

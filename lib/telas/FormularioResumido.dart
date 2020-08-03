@@ -56,7 +56,7 @@ class _FormularioResumidoState extends State<FormularioResumido> {
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   fit: BoxFit.cover,
-                                  image: ExactAssetImage("imagens/mapa/Mapa_001.PNG"),
+                                  image: ExactAssetImage("imagens/mapa/mapaBranco.png"),
                                 ),
                               ),
                             ),
@@ -72,27 +72,28 @@ class _FormularioResumidoState extends State<FormularioResumido> {
                                 children: <Widget>[
                                   /// NOME DO POSTO E ENDEREÇO
                                   Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Padding(
                                         padding: const EdgeInsets.all(5.0),
-                                        child: Text("Posto Ipiranga 001"),
+                                        child: Text("Posto Xxxxx"),
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.all(5.0),
-                                        child: Text("Al Rio Negro, 001"),
+                                        child: Text("Rua xxx, nºyyy"),
                                       ),
                                     ],
                                   ),
 
                                   /// STATUS E BOLINHA LARANJA
-                                  Row(
-                                    children: <Widget>[
-                                      Text("STATUS: "),
-                                      Icon(Icons.brightness_1,
-                                        color: (Colors.orange),
-                                      ),
-                                    ],
-                                  ),
+//                                  Row(
+//                                    children: <Widget>[
+//                                      Text("STATUS: "),
+//                                      Icon(Icons.brightness_1,
+//                                        color: (Colors.orange),
+//                                      ),
+//                                    ],
+//                                  ),
                                 ],
                               ),
                             ),
@@ -112,7 +113,7 @@ class _FormularioResumidoState extends State<FormularioResumido> {
                         ),
                         Padding(
                           padding: EdgeInsets.all(15),
-                          child: Text('Endereço: Rua Jovinal, 344 - São Paulo', style: TextStyle(fontSize: 20),),
+                          child: Text('Endereço: Rua xxx, nºyyy - São Paulo', style: TextStyle(fontSize: 20),),
                         ),
                         Padding(
                           padding: EdgeInsets.all(15),
@@ -135,7 +136,7 @@ class _FormularioResumidoState extends State<FormularioResumido> {
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 2,
                           child: Image.asset(
-                            "imagens/Raizen-logo.png",
+                            "imagens/sgsLogo.png",
                             fit: BoxFit.contain,
                           ),
                         ),

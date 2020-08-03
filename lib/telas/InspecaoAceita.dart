@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -64,7 +65,7 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: ExactAssetImage("imagens/mapa/Mapa_001.PNG"),
+                        image: ExactAssetImage("imagens/mapa/mapaBranco.png"),
                       ),
 
                     ),
@@ -76,25 +77,26 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Padding(
                               padding: const EdgeInsets.all(5.0),
-                              child: Text("Posto Ipiranga #1"),
+                              child: Text("Posto Xxxxx"),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(5.0),
-                              child: Text("Al Rio Negro, 001"),
+                              child: Text("Rua xxx, nºyyy"),
                             ),
                           ],
                         ),
-                        Row(
-                          children: <Widget>[
-                            Text("STATUS: "),
-                            Icon(Icons.brightness_1,
-                              color: (Colors.orange),
-                            ),
-                          ],
-                        ),
+//                        Row(
+//                          children: <Widget>[
+//                            Text("STATUS: "),
+//                            Icon(Icons.brightness_1,
+//                              color: (Colors.orange),
+//                            ),
+//                          ],
+//                        ),
                       ],
                     ),
                   ),
@@ -103,22 +105,33 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                 ],
               ),
 
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  RaisedButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(22),
-                      ),
-                      child: Text('Inserir Imagem', style: TextStyle(color: Colors.white, fontSize: 20),),
-                      color: COR_RAIZEN_ROXO,
 
-                      onPressed: (){}
+//              Row(
+//                mainAxisSize: MainAxisSize.max,
+//                mainAxisAlignment: MainAxisAlignment.center,
+//                children: <Widget>[
+//                  RaisedButton(
+//                      shape: RoundedRectangleBorder(
+//                        borderRadius: BorderRadius.circular(22),
+//                      ),
+//                      child: Row(
+//                        children: <Widget>[
+//                          Transform.rotate(
+//                            angle: pi/12,
+//                            child: Icon(Icons.attach_file, color: Colors.white,),
+//                          ),
+////                          Text('Inserir Imagem', style: TextStyle(color: Colors.white, fontSize: 16),),
+//                        ],
+//                      ),
+//                      color: COR_RAIZEN_ROXO,
+//
+//                      onPressed: (){}
+//
+//                  ),
+//                ],
+//              ),
 
-                  ),
-                ],
-              ),
+            SizedBox(height: 20,),
 ///TITULO SEGURANÇA OPERACIONAL
               Padding(
                 padding: EdgeInsets.only(left: 10, top: 10),
@@ -136,7 +149,24 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                     Text("1. O posto é isento de fontes de ignição fixas e funcionários intervem quando surgem fontes móveis?"),
                     Row(
                       children: <Widget>[
+                        RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(22),
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Transform.rotate(
+                                  angle: pi/12,
+                                  child: Icon(Icons.attach_file, color: COR_RAIZEN_ROXO,),
+                                ),
+//                          Text('Inserir Imagem', style: TextStyle(color: Colors.white, fontSize: 16),),
+                              ],
+                            ),
+                            color: Colors.white,
 
+                            onPressed: (){}
+
+                        ),
                         Radio(
                             value: "s",
                             groupValue: _pergunta1,
@@ -172,7 +202,24 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                     Text("2. Funcionário abastece moto somente quando o cliente desce da moto?"),
                     Row(
                       children: <Widget>[
+                        RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(22),
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Transform.rotate(
+                                  angle: pi/12,
+                                  child: Icon(Icons.attach_file, color: COR_RAIZEN_ROXO,),
+                                ),
+//                          Text('Inserir Imagem', style: TextStyle(color: Colors.white, fontSize: 16),),
+                              ],
+                            ),
+                            color: Colors.white,
 
+                            onPressed: (){}
+
+                        ),
                         Radio(
                             value: "s",
                             groupValue: _pergunta2,
@@ -208,7 +255,24 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                     Text("3. Todas as bombas possuem breakway?"),
                     Row(
                       children: <Widget>[
+                        RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(22),
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Transform.rotate(
+                                  angle: pi/12,
+                                  child: Icon(Icons.attach_file, color: COR_RAIZEN_ROXO,),
+                                ),
+//                          Text('Inserir Imagem', style: TextStyle(color: Colors.white, fontSize: 16),),
+                              ],
+                            ),
+                            color: Colors.white,
 
+                            onPressed: (){}
+
+                        ),
                         Radio(
                             value: "s",
                             groupValue: _pergunta3,
@@ -244,7 +308,24 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                     Text("4. Existe ponto de aterramento específico para descarga de combustíveis?"),
                     Row(
                       children: <Widget>[
+                        RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(22),
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Transform.rotate(
+                                  angle: pi/12,
+                                  child: Icon(Icons.attach_file, color: COR_RAIZEN_ROXO,),
+                                ),
+//                          Text('Inserir Imagem', style: TextStyle(color: Colors.white, fontSize: 16),),
+                              ],
+                            ),
+                            color: Colors.white,
 
+                            onPressed: (){}
+
+                        ),
                         Radio(
                             value: "s",
                             groupValue: _pergunta4,
@@ -280,7 +361,24 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                     Text("5. Ao abastecer GNV, todos saem e permanecem 3 metros à frente do veículo?"),
                     Row(
                       children: <Widget>[
+                        RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(22),
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Transform.rotate(
+                                  angle: pi/12,
+                                  child: Icon(Icons.attach_file, color: COR_RAIZEN_ROXO,),
+                                ),
+//                          Text('Inserir Imagem', style: TextStyle(color: Colors.white, fontSize: 16),),
+                              ],
+                            ),
+                            color: Colors.white,
 
+                            onPressed: (){}
+
+                        ),
                         Radio(
                             value: "s",
                             groupValue: _pergunta5,
@@ -326,7 +424,24 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                     Text("6. Respiros dos tanques possuem placa de aviso de área de risco?"),
                     Row(
                       children: <Widget>[
+                        RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(22),
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Transform.rotate(
+                                  angle: pi/12,
+                                  child: Icon(Icons.attach_file, color: COR_RAIZEN_ROXO,),
+                                ),
+//                          Text('Inserir Imagem', style: TextStyle(color: Colors.white, fontSize: 16),),
+                              ],
+                            ),
+                            color: Colors.white,
 
+                            onPressed: (){}
+
+                        ),
                         Radio(
                             value: "s",
                             groupValue: _pergunta6,
@@ -383,7 +498,24 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                     Text("7. Spill, sumps e canaletas ao redor da cobertura estão sem produto?"),
                     Row(
                       children: <Widget>[
+                        RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(22),
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Transform.rotate(
+                                  angle: pi/12,
+                                  child: Icon(Icons.attach_file, color: COR_RAIZEN_ROXO,),
+                                ),
+//                          Text('Inserir Imagem', style: TextStyle(color: Colors.white, fontSize: 16),),
+                              ],
+                            ),
+                            color: Colors.white,
 
+                            onPressed: (){}
+
+                        ),
                         Radio(
                             value: "s",
                             groupValue: _pergunta7,
@@ -419,7 +551,24 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                     Text("8. O posto possui caixa separadora de água e óleo e está limpa?"),
                     Row(
                       children: <Widget>[
+                        RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(22),
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Transform.rotate(
+                                  angle: pi/12,
+                                  child: Icon(Icons.attach_file, color: COR_RAIZEN_ROXO,),
+                                ),
+//                          Text('Inserir Imagem', style: TextStyle(color: Colors.white, fontSize: 16),),
+                              ],
+                            ),
+                            color: Colors.white,
 
+                            onPressed: (){}
+
+                        ),
                         Radio(
                             value: "s",
                             groupValue: _pergunta8,
@@ -465,7 +614,24 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                     Text("9. Material absorvente e extintores estão adequados e todos conhecem o plano de emergência?"),
                     Row(
                       children: <Widget>[
+                        RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(22),
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Transform.rotate(
+                                  angle: pi/12,
+                                  child: Icon(Icons.attach_file, color: COR_RAIZEN_ROXO,),
+                                ),
+//                          Text('Inserir Imagem', style: TextStyle(color: Colors.white, fontSize: 16),),
+                              ],
+                            ),
+                            color: Colors.white,
 
+                            onPressed: (){}
+
+                        ),
                         Radio(
                             value: "s",
                             groupValue: _pergunta9,
@@ -501,7 +667,24 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                     Text("10. É realizado treinamento simulado de plano de emergência?"),
                     Row(
                       children: <Widget>[
+                        RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(22),
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Transform.rotate(
+                                  angle: pi/12,
+                                  child: Icon(Icons.attach_file, color: COR_RAIZEN_ROXO,),
+                                ),
+//                          Text('Inserir Imagem', style: TextStyle(color: Colors.white, fontSize: 16),),
+                              ],
+                            ),
+                            color: Colors.white,
 
+                            onPressed: (){}
+
+                        ),
                         Radio(
                             value: "s",
                             groupValue: _pergunta10,
@@ -547,7 +730,24 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                     Text("11. Posto possui iluminação de LED na cobertura de bombas?"),
                     Row(
                       children: <Widget>[
+                        RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(22),
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Transform.rotate(
+                                  angle: pi/12,
+                                  child: Icon(Icons.attach_file, color: COR_RAIZEN_ROXO,),
+                                ),
+//                          Text('Inserir Imagem', style: TextStyle(color: Colors.white, fontSize: 16),),
+                              ],
+                            ),
+                            color: Colors.white,
 
+                            onPressed: (){}
+
+                        ),
                         Radio(
                             value: "s",
                             groupValue: _pergunta11,
@@ -581,8 +781,6 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
           ),
         ),
 
-
-
         bottomNavigationBar: BottomAppBar(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -595,11 +793,11 @@ class _InspecaoAceitaState extends State<InspecaoAceita> {
                     setState(() {
                       globals.telaSelecionada = 0;
                     });
-                    Navigator.pushReplacementNamed(context, "/home");
+                    Navigator.pushNamed(context, "/identificacaoResponsavel");
 
                   },
 
-                  label: Text("Finalizar e Enviar", style: TextStyle(fontSize: 20),)),
+                  label: Text("Avançar", style: TextStyle(fontSize: 20),)),
             ),
 
         ],),),

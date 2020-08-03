@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobilerisen/telas/Apresentacao.dart';
+import 'package:mobilerisen/telas/IdentificacaoResponsavel.dart';
 import 'package:mobilerisen/telas/NovaInspecao.dart';
 import 'package:mobilerisen/telas/InspecaoAceita.dart';
 import 'package:mobilerisen/telas/FormularioResumido.dart';
@@ -44,6 +45,9 @@ class RouteGenerator {
       case "/apresentacao":
         return MaterialPageRoute(
             builder: (_) => Apresentacao()
+        );      case "/identificacaoResponsavel":
+        return MaterialPageRoute(
+            builder: (_) => IdentificacaoResponsavel()
         );
       default:
         _erroRota();

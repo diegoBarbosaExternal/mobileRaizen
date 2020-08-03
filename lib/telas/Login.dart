@@ -72,7 +72,6 @@ class _LoginState extends State<Login> {
                   child: TextFormField(
                     controller: _controllerUsuario,
                   cursorColor: Colors.black12,
-
                     decoration: InputDecoration(
 
                       contentPadding: EdgeInsets.only(left: 10),

@@ -67,7 +67,7 @@ class _ApresentacaoState extends State<Apresentacao> {
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: ExactAssetImage("imagens/mapa/Mapa_001.PNG"),
+                              image: ExactAssetImage("imagens/mapa/mapaBranco.png"),
                             ),
                           ),
                         ),
@@ -83,27 +83,28 @@ class _ApresentacaoState extends State<Apresentacao> {
                             children: <Widget>[
                               /// NOME DO POSTO E ENDEREÇO
                               Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Padding(
                                     padding: const EdgeInsets.all(5.0),
-                                    child: Text("Posto Ipiranga 001"),
+                                    child: Text("Posto Xxxxx"),
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.all(5.0),
-                                    child: Text("Al Rio Negro, 001"),
+                                    child: Text("Rua xxx, nºyyy"),
                                   ),
                                 ],
                               ),
 
                               /// STATUS E BOLINHA LARANJA
-                              Row(
-                                children: <Widget>[
-                                  Text("STATUS: "),
-                                  Icon(Icons.brightness_1,
-                                    color: (Colors.orange),
-                                  ),
-                                ],
-                              ),
+//                              Row(
+//                                children: <Widget>[
+//                                  Text("STATUS: "),
+//                                  Icon(Icons.brightness_1,
+//                                    color: (Colors.orange),
+//                                  ),
+//                                ],
+//                              ),
                             ],
                           ),
                         ),
@@ -124,7 +125,7 @@ class _ApresentacaoState extends State<Apresentacao> {
                     SizedBox(
                       width: MediaQuery.of(context).size.width/2,
                       child: Image.asset(
-                        "imagens/Raizen-logo.png",
+                        "imagens/sgsLogo.png",
                         fit: BoxFit.contain,
                       ),
                     ),
